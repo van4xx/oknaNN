@@ -73,9 +73,6 @@ const Hero: React.FC = () => {
         const y = (clientY / height - 0.5) * 20;
         
         setMousePosition({ x, y });
-        
-        // Apply subtle 3D effect to content
-        contentRef.current.style.transform = `perspective(1000px) rotateX(${-y * 0.05}deg) rotateY(${x * 0.05}deg) translateZ(10px)`;
       }
     };
 
@@ -90,6 +87,13 @@ const Hero: React.FC = () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
+  
+  // Update effect when mousePosition changes
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.style.transform = `perspective(1000px) rotateX(${-mousePosition.y * 0.05}deg) rotateY(${mousePosition.x * 0.05}deg) translateZ(10px)`;
+    }
+  }, [mousePosition]);
 
   return (
     <section ref={heroRef} className={`hero ${isLoaded ? 'loaded' : ''}`}>
@@ -102,7 +106,13 @@ const Hero: React.FC = () => {
       
       <div className="hero-particles">
         {[...Array(50)].map((_, i) => (
-          <div key={i} className="particle"></div>
+          <div 
+            key={i} 
+            className="particle"
+            style={{
+              transform: `translateX(${mousePosition.x * 0.5 * (Math.random() - 0.5)}px) translateY(${mousePosition.y * 0.5 * (Math.random() - 0.5)}px)`
+            }}
+          ></div>
         ))}
       </div>
       
