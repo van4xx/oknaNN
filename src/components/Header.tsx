@@ -26,8 +26,11 @@ const Header: React.FC = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <div className="logo">
-          <h1>ОкнаПро</h1>
-          <p>Качественные окна в Нижнем Новгороде</p>
+          <img src="/logo192.png" alt="ОкнаПро" className="logo-image" />
+          <div className="logo-text">
+            <h1>ОкнаПро</h1>
+            <p>Качественные окна в Нижнем Новгороде</p>
+          </div>
         </div>
 
         <nav className={`main-nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
@@ -40,7 +43,20 @@ const Header: React.FC = () => {
         </nav>
 
         <div className="contact-info">
-          <a href="tel:+78312345678" className="phone">+7 (831) 234-56-78</a>
+          <div className="phone-numbers">
+            <a href="tel:2128385" className="phone">
+              <span className="phone-icon">📞</span>
+              <span>212-83-85</span>
+            </a>
+            <a href="tel:4100288" className="phone">
+              <span className="phone-icon">📞</span>
+              <span>410-02-88</span>
+            </a>
+            <a href="tel:+79200068027" className="phone">
+              <span className="phone-icon">📞</span>
+              <span>+7(920)006-80-27</span>
+            </a>
+          </div>
           <button className="call-btn">Заказать звонок</button>
         </div>
 

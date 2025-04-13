@@ -9,22 +9,22 @@ const Footer: React.FC = () => {
         <div className="footer-info">
           <div className="footer-about">
             <div className="footer-logo">
-              <h2>ОкнаПро</h2>
-              <p>Качественные окна в Нижнем Новгороде с 2010 года</p>
+              <h2>ООО "Окна НН"</h2>
+              <p>Качественные окна в Нижнем Новгороде с 2015 года</p>
             </div>
             <p className="about-text">
               Мы специализируемся на производстве и установке пластиковых окон, остеклении и отделке балконов. 
               Используем только проверенные материалы и комплектующие от европейских производителей.
             </p>
             <div className="social-icons">
-              <a href="#" className="social-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook" />
+              <a href="https://instagram.com/okna_nn" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <span>📸</span>
               </a>
-              <a href="#" className="social-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+              <a href="https://wa.me/79101234567" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <span>💬</span>
               </a>
-              <a href="#" className="social-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="VK" />
+              <a href="https://t.me/okna_nn" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <span>✈️</span>
               </a>
             </div>
           </div>
@@ -39,15 +39,15 @@ const Footer: React.FC = () => {
           </div>
           <div className="footer-contacts">
             <h3>Контакты</h3>
-            <p><i className="icon-location"></i> Адрес: г. Нижний Новгород, ул. Ленина, 10</p>
-            <p><i className="icon-phone"></i> Телефон: <a href="tel:+78312345678">+7 (831) 234-56-78</a></p>
-            <p><i className="icon-email"></i> Email: <a href="mailto:info@oknapro.ru">info@oknapro.ru</a></p>
-            <p><i className="icon-time"></i> Режим работы: Пн-Пт: 9:00-19:00, Сб: 10:00-16:00</p>
+            <p><span className="icon-location">📍</span> Адрес: г. Нижний Новгород, ул. Ларина, 15</p>
+            <p><span className="icon-phone">📞</span> Телефон: <a href="tel:+79101234567">+7 (910) 123-45-67</a></p>
+            <p><span className="icon-email">✉️</span> Email: <a href="mailto:info@okna-nn.ru">info@okna-nn.ru</a></p>
+            <p><span className="icon-time">🕒</span> Режим работы: Пн-Пт: 9:00-19:00, Сб: 10:00-16:00</p>
           </div>
         </div>
         <div className="copyright">
-          <p>&copy; {new Date().getFullYear()} ОкнаПро. Все права защищены.</p>
-          <p>Разработка сайта: <a href="#">WebStudio</a></p>
+          <p>&copy; {new Date().getFullYear()} ООО "Окна НН". Все права защищены.</p>
+          <p>ИНН: 5256123456 | ОГРН: 1157746123456</p>
         </div>
       </div>
     </footer>
